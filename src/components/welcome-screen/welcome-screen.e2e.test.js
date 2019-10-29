@@ -11,7 +11,6 @@ it(`App is correctly rendered after relaunch`, () => {
   const app = shallow(<WelcomeScreen
     gameTime = {0}
     errorCount = {0}
-    onClickHandler = {clickHandler}
   />);
 
   const btn = app.find(`.welcome__button`);

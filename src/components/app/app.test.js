@@ -7,7 +7,6 @@ it(`App component renders correctly`, () => {
     .create(<App
       gameTime = {0}
       errorCount = {0}
-      onClickHandler = {jest.fn()}
     />)
     .toJSON();
 
