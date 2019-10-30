@@ -5,12 +5,13 @@ import WelcomeScreen from "./welcome-screen.jsx";
 
 Enzyme.configure({adapter: new Adapter()});
 
-it(`App is correctly rendered after relaunch`, () => {
+it(`WelcomeScreen is correctly rendered after relaunch`, () => {
 
   const clickHandler = jest.fn();
   const app = shallow(<WelcomeScreen
     gameTime = {0}
     errorCount = {0}
+    onStartButtonClick = {clickHandler}
   />);
 
   const btn = app.find(`.welcome__button`);

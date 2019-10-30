@@ -1,15 +1,14 @@
 import React from 'react';
-import App from './app.jsx';
+import GuessArtist from './guess-artist';
 import renderer from 'react-test-renderer';
 import questions from "../../mocks/questions.js";
 
 it(`App component renders correctly`, () => {
   const tree = renderer
-    .create(<App
-      gameTime = {0}
-      errorCount = {0}
-      questions = {questions}
-      onUserAnswer = {jest.fn()}
+    .create(<GuessArtist
+      question = {questions[1]}
+      screenIndex = {0}
+      onAnswer = {jest.fn()}
     />)
     .toJSON();
 
