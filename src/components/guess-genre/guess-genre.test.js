@@ -1,12 +1,34 @@
 import React from 'react';
 import GuessGenre from './guess-genre';
 import renderer from 'react-test-renderer';
-import questions from "../../mocks/questions.js";
+
+const question = {
+  type: `genre`,
+  genre: `rock`,
+  answers: [
+    {
+      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      genre: `rock`,
+    },
+    {
+      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      genre: `pop`,
+    },
+    {
+      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      genre: `jazz`,
+    },
+    {
+      src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+      genre: `rock`,
+    },
+  ],
+};
 
 it(`App component renders correctly`, () => {
   const tree = renderer
     .create(<GuessGenre
-      question = {questions[0]}
+      question = {question}
       screenIndex = {0}
       onAnswer = {jest.fn()}
     />)

@@ -42,7 +42,7 @@ const GuessGenre = ({question, screenIndex, onAnswer}) => {
             <div className="track" key={`${screenIndex}-answer-${i}`}>
               <button className="track__button track__button--play" type="button"></button>
               <div className="track__status">
-                <audio></audio>
+                <audio/>
               </div>
               <div className="game__answer">
                 <input className="game__input visually-hidden" type="checkbox" name="answer" value={`answer-${i}`} id={`answer-${i}`}/>

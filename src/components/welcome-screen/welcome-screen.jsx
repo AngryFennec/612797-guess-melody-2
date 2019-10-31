@@ -27,9 +27,9 @@ const WelcomeScreen = (props) => {
 };
 
 WelcomeScreen.propTypes = {
-  gameTime: PropTypes.number,
-  errorCount: PropTypes.number,
-  onStartButtonClick: PropTypes.func
+  gameTime: PropTypes.number.isRequired,
+  errorCount: PropTypes.number.isRequired,
+  onStartButtonClick: PropTypes.func.isRequired
 };
 
 

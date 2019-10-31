@@ -36,7 +36,7 @@ const GuessArtist = ({question, screenIndex, onAnswer}) => {
           <div className="track">
             <button className="track__button track__button--play" type="button"></button>
             <div className="track__status">
-              <audio></audio>
+              <audio/>
             </div>
           </div>
         </div>
