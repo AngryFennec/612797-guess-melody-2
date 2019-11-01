@@ -1,7 +1,3 @@
-import React from 'react';
-import App from './app.jsx';
-import renderer from 'react-test-renderer';
-
 const questions = [
   {
     type: `genre`,
@@ -50,15 +46,4 @@ const questions = [
   },
 ];
 
-it(`App component renders correctly`, () => {
-  const tree = renderer
-    .create(<App
-      gameTime = {0}
-      errorCount = {0}
-      questions = {questions}
-      onUserAnswer = {jest.fn()}
-    />)
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
+export default questions;

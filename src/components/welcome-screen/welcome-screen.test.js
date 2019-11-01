@@ -7,7 +7,7 @@ it(`WelcomeScreen component renders correctly`, () => {
     .create(<WelcomeScreen
       gameTime = {0}
       errorCount = {0}
-      onClickHandler = {jest.fn()}
+      onStartButtonClick = {jest.fn()}
     />)
     .toJSON();
 

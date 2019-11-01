@@ -2,13 +2,17 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 const WelcomeScreen = (props) => {
-  const {gameTime, errorCount, onClickHandler} = props;
-  return <section className="welcome">
+  const {
+    gameTime,
+    errorCount,
+    onStartButtonClick
+  } = props;
+  return (<section className="welcome">
     <div className="welcome__logo">
       <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83"/>
     </div>
     <button
-      onClick = {onClickHandler}
+      onClick = {onStartButtonClick}
       className="welcome__button">
       <span className="visually-hidden">Начать игру</span>
     </button>
@@ -19,13 +23,13 @@ const WelcomeScreen = (props) => {
       <li>Можно допустить {errorCount} ошибки.</li>
     </ul>
     <p className="welcome__text">Удачи!</p>
-  </section>;
+  </section>);
 };
 
 WelcomeScreen.propTypes = {
-  gameTime: PropTypes.number,
-  errorCount: PropTypes.number,
-  onClickHandler: PropTypes.func
+  gameTime: PropTypes.number.isRequired,
+  errorCount: PropTypes.number.isRequired,
+  onStartButtonClick: PropTypes.func.isRequired
 };
 
 
