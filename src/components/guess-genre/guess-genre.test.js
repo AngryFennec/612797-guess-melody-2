@@ -25,11 +25,10 @@ const question = {
   ],
 };
 
-it(`App component renders correctly`, () => {
+it(`GuessGenre component renders correctly`, () => {
   const tree = renderer
     .create(<GuessGenre
       question = {question}
-      screenIndex = {0}
       onAnswer = {jest.fn()}
     />)
     .toJSON();

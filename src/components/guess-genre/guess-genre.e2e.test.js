@@ -33,7 +33,6 @@ it(`GuessGenre is correctly rendered after relaunch`, () => {
   const clickHandler = jest.fn();
   const screen = shallow(<GuessGenre
     question = {question}
-    screenIndex = {0}
     onAnswer = {clickHandler}
   />);
 
