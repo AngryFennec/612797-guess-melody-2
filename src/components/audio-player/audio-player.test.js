@@ -8,8 +8,12 @@ it(`AudioPlayer correctly renders after relaunch`, () => {
   .create(<AudioPlayer
     isPlaying={false}
     onPlayButtonClick= {jest.fn()}
-    src= {``}
-  />)
+    src= {`https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`}
+  />, {
+    createNodeMock: () => {
+      return {};
+    }
+  })
   .toJSON();
 
   expect(tree).toMatchSnapshot();

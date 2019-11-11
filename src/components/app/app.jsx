@@ -50,7 +50,6 @@ class App extends React.Component {
   render() {
     const {questions} = this.props;
     const {question} = this.state;
-    console.log();
     let gameType = undefined;
     if (this.state.question !== -1) {
       gameType = questions[question].type === `genre` ?  Type.GENRE : Type.ARTIST;
