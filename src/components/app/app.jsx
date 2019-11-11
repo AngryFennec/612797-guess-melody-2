@@ -50,8 +50,13 @@ class App extends React.Component {
   render() {
     const {questions} = this.props;
     const {question} = this.state;
+    console.log();
+    let gameType = undefined;
+    if (this.state.question !== -1) {
+      gameType = questions[question].type === `genre` ?  Type.GENRE : Type.ARTIST;
+    }
 
-    return <section className={`game ${Type.ARTIST}`}>
+    return <section className={`game ${gameType !== undefined ? gameType : `` }`}>
       {this.state.question !== -1 && <header className="game__header">
         <a className="game__back" href="#">
           <span className="visually-hidden">Сыграть ещё раз</span>
