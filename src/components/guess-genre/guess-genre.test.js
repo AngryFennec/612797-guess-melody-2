@@ -30,7 +30,12 @@ it(`GuessGenre component renders correctly`, () => {
     .create(<GuessGenre
       question = {question}
       onAnswer = {jest.fn()}
-    />)
+    />,
+    {
+      createNodeMock: () => {
+        return {};
+      }
+    })
     .toJSON();
 
   expect(tree).toMatchSnapshot();

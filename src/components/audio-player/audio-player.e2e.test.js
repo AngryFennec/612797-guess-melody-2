@@ -1,21 +1,26 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import AudioPlayer from './audio-player';
 
 Enzyme.configure({adapter: new Adapter()});
 
-const playButtonCLickHandler = jest.fn();
-
 it(`AudioPlayer correctly renders after relaunch`, () => {
 
-  const screen = shallow(<AudioPlayer
-    isPlaying={false}
-    onPlayButtonClick= {playButtonCLickHandler}
-    src= {``}
-  />);
+  const props = {
+    isPlaying: false,
+    onPlayButtonClick: jest.fn(),
+    src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`
+  };
+
+  AudioPlayer.prototype.componentDidUpdate = jest.fn();
+  const screen = mount(<AudioPlayer {...props} />);
 
   const btn = screen.find(`.track__button`);
-  btn.simulate(`click`);
-  expect(playButtonCLickHandler).toHaveBeenCalledTimes(1);
+
+  expect(screen.state().isPlaying).toBe(false);
+  btn.props().onClick();
+  expect(screen.state().isPlaying).toBe(true);
+
+  expect(props.onPlayButtonClick).toHaveBeenCalledTimes(1);
 });

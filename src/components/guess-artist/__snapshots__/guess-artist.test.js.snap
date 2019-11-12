@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuessArtist component renders correctly 1`] = `
+<section
+  className="game__screen"
+>
+  <h2
+    className="game__title"
+  >
+    Кто исполняет эту песню?
+  </h2>
+  <div
+    className="game__track"
+  >
+    <button
+      className="track__button track__button--play"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    />
+    <div
+      className="track__status"
+    >
+      <audio />
+    </div>
+  </div>
+  <form
+    className="game__artist"
+    onChange={[MockFunction]}
+  >
+    <div
+      className="artist"
+    >
+      <input
+        className="artist__input visually-hidden"
+        id="artist-0"
+        name="answer"
+        type="radio"
+        value="artist-0"
+      />
+      <label
+        className="artist__name"
+        htmlFor="artist-0"
+      >
+        <img
+          alt="Artist 1"
+          className="artist__picture"
+          src="http://placehold.it/134x134"
+        />
+        Artist 1
+      </label>
+    </div>
+    <div
+      className="artist"
+    >
+      <input
+        className="artist__input visually-hidden"
+        id="artist-1"
+        name="answer"
+        type="radio"
+        value="artist-1"
+      />
+      <label
+        className="artist__name"
+        htmlFor="artist-1"
+      >
+        <img
+          alt="Artist 2"
+          className="artist__picture"
+          src="http://placehold.it/134x134"
+        />
+        Artist 2
+      </label>
+    </div>
+    <div
+      className="artist"
+    >
+      <input
+        className="artist__input visually-hidden"
+        id="artist-2"
+        name="answer"
+        type="radio"
+        value="artist-2"
+      />
+      <label
+        className="artist__name"
+        htmlFor="artist-2"
+      >
+        <img
+          alt="Artist 3"
+          className="artist__picture"
+          src="http://placehold.it/134x134"
+        />
+        Artist 3
+      </label>
+    </div>
+    <div
+      className="artist"
+    >
+      <input
+        className="artist__input visually-hidden"
+        id="artist-3"
+        name="answer"
+        type="radio"
+        value="artist-3"
+      />
+      <label
+        className="artist__name"
+        htmlFor="artist-3"
+      >
+        <img
+          alt="Artist 4"
+          className="artist__picture"
+          src="http://placehold.it/134x134"
+        />
+        Artist 4
+      </label>
+    </div>
+  </form>
+</section>
+`;

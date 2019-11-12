@@ -2,7 +2,7 @@
 
 exports[`App component renders correctly 1`] = `
 <section
-  className="game game--artist"
+  className="game "
 >
   <section
     className="welcome"
