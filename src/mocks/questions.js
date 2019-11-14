@@ -4,19 +4,23 @@ const questions = [
     genre: `rock`,
     answers: [
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        id: `id0-1`,
+        src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`,
         genre: `rock`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        id: `id0-2`,
+        src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`,
         genre: `pop`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        id: `id0-3`,
+        src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`,
         genre: `jazz`,
       },
       {
-        src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+        id: `id0-4`,
+        src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`,
         genre: `rock`,
       },
     ],
@@ -24,21 +28,28 @@ const questions = [
 
   {
     type: `artist`,
-    src: `https://upload.wikimedia.org/wikipedia/commons/1/1f/Uganda_flag_and_national_anthem_-_Oh_Uganda_Land_o.ogg`,
+    song: {
+      artist: `Jim Beam`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/a/a3/Kimi_ga_Yo_instrumental.ogg`,
+    },
     answers: [
       {
+        id: `id1-1`,
         picture: `http://placehold.it/134x134`,
         artist: `Artist 1`
       },
       {
+        id: `id1-2`,
         picture: `http://placehold.it/134x134`,
         artist: `Artist 2`
       },
       {
+        id: `id1-3`,
         picture: `http://placehold.it/134x134`,
         artist: `Artist 3`
       },
       {
+        id: `id1-4`,
         picture: `http://placehold.it/134x134`,
         artist: `Artist 4`
       },
