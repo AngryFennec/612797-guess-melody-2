@@ -3,7 +3,7 @@ import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
 import PropTypes from 'prop-types';
 import GuessGenre from "../guess-genre/guess-genre.jsx";
 import GuessArtist from "../guess-artist/guess-artist.jsx";
-const Type = {
+const QuestionType = {
   ARTIST: `game--artist`,
   GENRE: `game--genre`,
 };
@@ -52,7 +52,7 @@ class App extends React.Component {
     const {question} = this.state;
     let gameType;
     if (this.state.question !== -1) {
-      gameType = questions[question].type === `genre` ? Type.GENRE : Type.ARTIST;
+      gameType = questions[question].type === `genre` ? Question.GENRE : QuestionType.ARTIST;
     }
 
     return <section className={`game ${gameType !== undefined ? gameType : `` }`}>
@@ -87,7 +87,7 @@ class App extends React.Component {
 
       {this._getScreen(questions[question], () => {
         this.setState({
-          question: question + 1 >= questions.length
+          question: question >= questions.length - 1
             ? -1
             : question + 1,
         });
